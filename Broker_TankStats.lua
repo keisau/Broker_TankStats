@@ -8,8 +8,7 @@ local two_fp = "%.2f%%"
 local dodge,block,parry,sum = 0,0,0,0
 
 TS:RegisterEvent("UNIT_STATS")
-TS:RegisterEvent("UNIT_MODEL_CHANGED")
-TS:RegisterEvent("UNIT_INVENTORY_CHANGED")
+TS:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 TS:RegisterEvent("PLAYER_LEVEL_UP")
 TS:RegisterEvent("UNIT_AURA")
 TS:RegisterEvent("PLAYER_LOGIN")
@@ -28,7 +27,7 @@ if (LDB) then
 	TSframe = CreateFrame("Frame", "LDB_TS")
 	TSframe.obj = LDB:NewDataObject("TankStats", {
 		type = "data source",
-		icon = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
+		icon = "Interface\\Icons\\ability_paladin_shieldofvengeance",
 		text = format(two_fp, sum),
 		value = format(two_fp, sum),
 		suffix = "SUFFIX",
